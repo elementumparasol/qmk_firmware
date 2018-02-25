@@ -200,4 +200,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     KE1,KC_NO, K1D,K1B,K06,K19,K05,K11,K10,K36,K37,K38,    K87,KE5,      K52,      K59,K5A,K5B,KC_NO,  KC_NO, KC_NO,  \
     KE0,KE3,KE2,K8B,KC_NO,     K2C,    KC_NO, K8A,K88,KE6,KE7,K65,KE4,  K50,K51,K4F,  K62,    K63,K58, KC_NO, KC_NO   \
 )
+#define KEYMAP_LOGIC( \
+    KC_ESC,                 \
+    KC_BSPC,     \
+    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,   KC_Y,   KC_U,   KC_I,    KC_O,    KC_P,    \
+    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,   KC_H,   KC_J,   KC_K,    KC_L,   KC_ENT,   \
+    KC_LSFT,  KC_Z,    KC_X,    KC_C,    KC_V,   KC_B,   KC_N,   KC_M,   KC_UP, \
+    KC_LGUI,        KC_SPC,              KC_LEFT, KC_DOWN, KC_RGHT    \
+) KEYMAP_ALL(KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO,  KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
+    KC_ESC,           KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO,  KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO,  KC_NO,               KC_NO, KC_NO, KC_NO,    KC_NO, KC_NO, KC_NO, KC_NO,     KC_NO,          \
+    KC_NO,  KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,    KC_NO,    KC_NO, KC_NO,  KC_NO, KC_BSPC,     KC_NO,  KC_NO, KC_NO,    KC_NO, KC_NO, KC_NO, KC_NO,    KC_NO, KC_NO, \
+    KC_NO,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,   KC_Y,   KC_U,   KC_I,    KC_O,    KC_P,    KC_NO, KC_NO,          KC_NO,     KC_NO,  KC_NO,  KC_NO,    KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO, KC_NO, \
+    KC_NO, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,   KC_H,   KC_J,   KC_K,    KC_L,    KC_NO, KC_NO,          KC_NO, KC_ENT,                                    KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO, KC_NO, \
+    KC_LSFT, KC_NO, KC_Z,    KC_X,    KC_C,    KC_V,   KC_B,   KC_N,   KC_M,    KC_NO, KC_NO,  KC_NO,          KC_NO,   KC_NO,              KC_UP,               KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO, KC_NO,KC_NO, KC_LGUI, KC_NO, KC_NO, KC_NO,KC_SPC,KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,KC_NO,KC_LEFT, KC_DOWN, KC_RGHT,KC_NO,KC_NO, KC_NO,KC_NO, KC_NO)
 #endif
