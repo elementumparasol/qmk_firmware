@@ -213,4 +213,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     KC_NO,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,   KC_Y,   KC_U,   KC_I,    KC_O,    KC_P,    KC_NO, KC_NO,          KC_NO,     KC_NO,  KC_NO,  KC_NO,    KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO, KC_NO, \
     KC_NO, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,   KC_H,   KC_J,   KC_K,    KC_L,    KC_NO, KC_NO,          KC_NO, KC_ENT,                                    KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO, KC_NO, \
     KC_LSFT, KC_NO, KC_Z,    KC_X,    KC_C,    KC_V,   KC_B,   KC_N,   KC_M,    KC_NO, KC_NO,  KC_NO,          KC_NO,   KC_NO,              KC_UP,               KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO, KC_NO,KC_NO, KC_LGUI, KC_NO, KC_NO, KC_NO,KC_SPC,KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,KC_NO,KC_LEFT, KC_DOWN, KC_RGHT,KC_NO,KC_NO, KC_NO,KC_NO, KC_NO)
+
+#define KEYMAP_FIT( \
+    KC_Z,   KC_V,   KC_C,   KC_H,   KC_W,   KC_K,   \
+    KC_F,   KC_I,   KC_T,   KC_A,   KC_L,   KC_Y,   \
+    KC_LSFT,KC_SPC, KC_N,   KC_E,   KC_BSPC,KC_ENT, \
+    KC_G,   KC_D,   KC_O,   KC_R,   KC_S,   KC_B,   \
+    KC_Q,   KC_J,   KC_U,   KC_M,   KC_P,   KC_X,   \
+    KC_ESC, KC_LGUI,KC_UP,  KC_DOWN,KC_LEFT,KC_RGHT \
+) KEYMAP_LOGIC( \
+    KC_ESC,                 \
+    KC_BSPC,     \
+    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,   KC_Y,   KC_U,   KC_I,    KC_O,    KC_P,    \
+    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,   KC_H,   KC_J,   KC_K,    KC_L,   KC_ENT,   \
+    KC_LSFT,  KC_Z,    KC_X,    KC_C,    KC_V,   KC_B,   KC_N,   KC_M,   KC_UP, \
+    KC_LGUI,        KC_SPC,              KC_LEFT, KC_DOWN, KC_RGHT    \
+)
+
 #endif
