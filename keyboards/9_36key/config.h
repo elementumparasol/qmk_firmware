@@ -29,20 +29,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DESCRIPTION     Bishop Keyboards 9Key // Charleston, SC Meetup Handout
 
 /* key matrix size */
-#define MATRIX_ROWS 3
-#define MATRIX_COLS 3
+#define MATRIX_ROWS 6
+#define MATRIX_COLS 6
 
 /* 9Key PCB default pin-out */
-#define MATRIX_ROW_PINS { D1, D0, D4 }
-#define MATRIX_COL_PINS { F4, F5, F6 }
+#define MATRIX_ROW_PINS { B2, B1, F7, F6, F5, F4 }
+#define MATRIX_COL_PINS { D3, D2, D4, C6, D7, E6 }
 #define UNUSED_PINS
 
 /* ws2812 RGB LED */
-#define RGB_DI_PIN F7
+#define RGB_DI_PIN B5
 #define RGBLIGHT_TIMER
 #define RGBLED_NUM 1    // Number of LEDs
-#define ws2812_PORTREG  PORTD
-#define ws2812_DDRREG   DDRD
+// #define ws2812_PORTREG  PORTD
+// #define ws2812_DDRREG   DDRD
 
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW
