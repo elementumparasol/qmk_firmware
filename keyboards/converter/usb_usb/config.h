@@ -32,7 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT         QMK USB-USB Converter
 #define DESCRIPTION     USB to USB Keyboard Converter with QMK
 
-#define TAPPING_TERM 200
+// #define TAPPING_TERM 200
 
 /* size of virtual matrix */
 #define MATRIX_ROWS 16

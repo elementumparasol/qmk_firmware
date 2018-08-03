@@ -27,17 +27,21 @@ enum fitaly_keycodes {
   Layer_1,
   Layer_2,
   Layer_3,
+  Layer_4,
+  Layer_5,
 };
 enum fitaly_layers {
   Layer0 = 0,
   Layer1,
   Layer2,
   Layer3,
+  Layer4,
+  Layer5,
 };
-enum {
-  D_4 = 0,
-  E_5,
-};
+// enum {
+//   D_4 = 0,
+//   E_5,
+// };
 
 const uint16_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
     /* 0: plain Qwerty without layer switching
@@ -68,26 +72,26 @@ const uint16_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
         //     KC_ESC, KC_LGUI,KC_UP,  KC_DOWN,KC_LEFT,KC_RGHT 
         // ),
         [0] = KEYMAP_FIT( 
-            KC_Z,   M(M_D_V),   KC_C,   KC_H,   KC_W,   KC_K,   
-            KC_F,   M(M_D_I),   KC_T,   KC_A,   KC_L,   KC_Y,   
-            KC_LSFT,KC_SPC, KC_N,   KC_E,   KC_BSPC,KC_ENT, 
+            KC_Z,   KC_V,   KC_C,   KC_H,   KC_W,   KC_K,   
+            KC_F,   KC_I,   KC_T,   KC_A,   KC_L,   KC_Y,   
+            KC_LSFT,LGUI_T(KC_SPC), KC_N,   KC_E,   RALT_T(KC_BSPC),RCTL_T(KC_ENT), 
             KC_G,   KC_D,   KC_O,   KC_R,   KC_0,   KC_B,   
-            LT(1,KC_Q),   KC_J,   M(M_D_U),   KC_M,   KC_P,   KC_X,   
+            KC_Q,   KC_J,   KC_U,   KC_M,   KC_P,   KC_X,   
             Layer_0, Layer_1,Layer_2,  Layer_3,KC_MS_L,KC_MS_R 
         ),
         [1] = KEYMAP_FIT( 
-         KC_V,   KC_Z,      KC_C,   KC_H,   KC_W,   KC_K,   
-            KC_F,   KC_I,   KC_T,   KC_ASTR,   KC_L,   KC_Y,   
-            KC_LSFT,KC_SPC, KC_N,   KC_E,   KC_BSPC,KC_ENT, 
-            KC_G,   KC_D,   KC_O,   KC_R,   KC_1,   KC_B,   
-            ______,   KC_J,   KC_U,   KC_M,   KC_P,   KC_X,   
+            S(KC_Z),  S(KC_V),    S(KC_C),   S(KC_H),   S(KC_W),   S(KC_K),   
+            S(KC_F),  S(KC_I),    S(KC_T),   S(KC_A),   S(KC_L),   S(KC_Y),   
+            KC_LSFT,KC_SPC, S(KC_N),   S(KC_E),   KC_BSPC,KC_ENT, 
+            S(KC_G),   S(KC_D),   S(KC_O),   S(KC_R),   KC_1,   S(KC_B),   
+            S(KC_Q),   S(KC_J),   S(KC_U),   S(KC_M),   S(KC_P),   S(KC_X),   
             ______, ______,______,  ______,KC_LEFT,KC_RGHT 
         ),
         [2] = KEYMAP_FIT( 
          KC_V,   KC_Z,      KC_C,   KC_H,   KC_W,   KC_K,   
             KC_F,   KC_I,   KC_T,   KC_2,   KC_L,   KC_Y,   
             KC_LSFT,KC_SPC, KC_N,   KC_E,   KC_BSPC,KC_ENT, 
-            KC_G,   KC_D,   KC_O,   KC_R,   KC_S,   KC_B,   
+            KC_G,   KC_D,   KC_O,   KC_R,   KC_2,   KC_B,   
             ______,   KC_J,   KC_U,   KC_M,   KC_P,   KC_X,   
             ______, ______,______,  ______,KC_LEFT,KC_RGHT 
         ),
@@ -95,11 +99,106 @@ const uint16_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
          KC_V,   KC_Z,      KC_C,   KC_H,   KC_W,   KC_K,   
             KC_F,   KC_I,   KC_T,   KC_3,   KC_L,   KC_Y,   
             KC_LSFT,KC_SPC, KC_N,   KC_E,   KC_BSPC,KC_ENT, 
-            KC_G,   KC_D,   KC_O,   KC_R,   KC_S,   KC_B,   
+            KC_G,   KC_D,   KC_O,   KC_R,   KC_3,   KC_B,   
             ______,   KC_J,   KC_U,   KC_M,   KC_P,   KC_X,   
             ______, ______,______,  ______,KC_LEFT,KC_RGHT 
         ),
-
+        [4] = KEYMAP_FIT( 
+         KC_V,   KC_Z,      KC_C,   KC_H,   KC_W,   KC_K,   
+            KC_F,   KC_I,   KC_T,   KC_3,   KC_L,   KC_Y,   
+            KC_LSFT,KC_SPC, KC_N,   KC_E,   KC_BSPC,KC_ENT, 
+            KC_G,   KC_D,   KC_O,   KC_R,   KC_4,   KC_B,   
+            ______,   KC_J,   KC_U,   KC_M,   KC_P,   KC_X,   
+            ______, ______,______,  ______,KC_LEFT,KC_RGHT 
+        ),
+        [5] = KEYMAP_FIT( 
+         KC_V,   KC_Z,      KC_C,   KC_H,   KC_W,   KC_K,   
+            KC_F,   KC_I,   KC_T,   KC_3,   KC_L,   KC_Y,   
+            KC_LSFT,KC_SPC, KC_N,   KC_E,   KC_BSPC,KC_ENT, 
+            KC_G,   KC_D,   KC_O,   KC_R,   KC_5,   KC_B,   
+            ______,   KC_J,   KC_U,   KC_M,   KC_P,   KC_X,   
+            ______, ______,______,  ______,KC_LEFT,KC_RGHT 
+        ),
+        // [6] = KEYMAP_FIT( 
+        //  KC_V,   KC_Z,      KC_C,   KC_H,   KC_W,   KC_K,   
+        //     KC_F,   KC_I,   KC_T,   KC_3,   KC_L,   KC_Y,   
+        //     KC_LSFT,KC_SPC, KC_N,   KC_E,   KC_BSPC,KC_ENT, 
+        //     KC_G,   KC_D,   KC_O,   KC_R,   KC_S,   KC_B,   
+        //     ______,   KC_J,   KC_U,   KC_M,   KC_P,   KC_X,   
+        //     ______, ______,______,  ______,KC_LEFT,KC_RGHT 
+        // ),
+        // [7] = KEYMAP_FIT( 
+        //  KC_V,   KC_Z,      KC_C,   KC_H,   KC_W,   KC_K,   
+        //     KC_F,   KC_I,   KC_T,   KC_3,   KC_L,   KC_Y,   
+        //     KC_LSFT,KC_SPC, KC_N,   KC_E,   KC_BSPC,KC_ENT, 
+        //     KC_G,   KC_D,   KC_O,   KC_R,   KC_S,   KC_B,   
+        //     ______,   KC_J,   KC_U,   KC_M,   KC_P,   KC_X,   
+        //     ______, ______,______,  ______,KC_LEFT,KC_RGHT 
+        // ),
+        // [8] = KEYMAP_FIT( 
+        //  KC_V,   KC_Z,      KC_C,   KC_H,   KC_W,   KC_K,   
+        //     KC_F,   KC_I,   KC_T,   KC_3,   KC_L,   KC_Y,   
+        //     KC_LSFT,KC_SPC, KC_N,   KC_E,   KC_BSPC,KC_ENT, 
+        //     KC_G,   KC_D,   KC_O,   KC_R,   KC_S,   KC_B,   
+        //     ______,   KC_J,   KC_U,   KC_M,   KC_P,   KC_X,   
+        //     ______, ______,______,  ______,KC_LEFT,KC_RGHT 
+        // ),
+        // [9] = KEYMAP_FIT( 
+        //  KC_V,   KC_Z,      KC_C,   KC_H,   KC_W,   KC_K,   
+        //     KC_F,   KC_I,   KC_T,   KC_3,   KC_L,   KC_Y,   
+        //     KC_LSFT,KC_SPC, KC_N,   KC_E,   KC_BSPC,KC_ENT, 
+        //     KC_G,   KC_D,   KC_O,   KC_R,   KC_S,   KC_B,   
+        //     ______,   KC_J,   KC_U,   KC_M,   KC_P,   KC_X,   
+        //     ______, ______,______,  ______,KC_LEFT,KC_RGHT 
+        // ),
+        // [10] = KEYMAP_FIT( 
+        //  KC_V,   KC_Z,      KC_C,   KC_H,   KC_W,   KC_K,   
+        //     KC_F,   KC_I,   KC_T,   KC_3,   KC_L,   KC_Y,   
+        //     KC_LSFT,KC_SPC, KC_N,   KC_E,   KC_BSPC,KC_ENT, 
+        //     KC_G,   KC_D,   KC_O,   KC_R,   KC_S,   KC_B,   
+        //     ______,   KC_J,   KC_U,   KC_M,   KC_P,   KC_X,   
+        //     ______, ______,______,  ______,KC_LEFT,KC_RGHT 
+        // ),
+        // [11] = KEYMAP_FIT( 
+        //  KC_V,   KC_Z,      KC_C,   KC_H,   KC_W,   KC_K,   
+        //     KC_F,   KC_I,   KC_T,   KC_3,   KC_L,   KC_Y,   
+        //     KC_LSFT,KC_SPC, KC_N,   KC_E,   KC_BSPC,KC_ENT, 
+        //     KC_G,   KC_D,   KC_O,   KC_R,   KC_S,   KC_B,   
+        //     ______,   KC_J,   KC_U,   KC_M,   KC_P,   KC_X,   
+        //     ______, ______,______,  ______,KC_LEFT,KC_RGHT 
+        // ),
+        // [12] = KEYMAP_FIT( 
+        //  KC_V,   KC_Z,      KC_C,   KC_H,   KC_W,   KC_K,   
+        //     KC_F,   KC_I,   KC_T,   KC_3,   KC_L,   KC_Y,   
+        //     KC_LSFT,KC_SPC, KC_N,   KC_E,   KC_BSPC,KC_ENT, 
+        //     KC_G,   KC_D,   KC_O,   KC_R,   KC_S,   KC_B,   
+        //     ______,   KC_J,   KC_U,   KC_M,   KC_P,   KC_X,   
+        //     ______, ______,______,  ______,KC_LEFT,KC_RGHT 
+        // ),
+        // [13] = KEYMAP_FIT( 
+        //  KC_V,   KC_Z,      KC_C,   KC_H,   KC_W,   KC_K,   
+        //     KC_F,   KC_I,   KC_T,   KC_3,   KC_L,   KC_Y,   
+        //     KC_LSFT,KC_SPC, KC_N,   KC_E,   KC_BSPC,KC_ENT, 
+        //     KC_G,   KC_D,   KC_O,   KC_R,   KC_S,   KC_B,   
+        //     ______,   KC_J,   KC_U,   KC_M,   KC_P,   KC_X,   
+        //     ______, ______,______,  ______,KC_LEFT,KC_RGHT 
+        // ),
+        // [14] = KEYMAP_FIT( 
+        //  KC_V,   KC_Z,      KC_C,   KC_H,   KC_W,   KC_K,   
+        //     KC_F,   KC_I,   KC_T,   KC_3,   KC_L,   KC_Y,   
+        //     KC_LSFT,KC_SPC, KC_N,   KC_E,   KC_BSPC,KC_ENT, 
+        //     KC_G,   KC_D,   KC_O,   KC_R,   KC_S,   KC_B,   
+        //     ______,   KC_J,   KC_U,   KC_M,   KC_P,   KC_X,   
+        //     ______, ______,______,  ______,KC_LEFT,KC_RGHT 
+        // ),
+        // [15] = KEYMAP_FIT( 
+        //  KC_V,   KC_Z,      KC_C,   KC_H,   KC_W,   KC_K,   
+        //     KC_F,   KC_I,   KC_T,   KC_3,   KC_L,   KC_Y,   
+        //     KC_LSFT,KC_SPC, KC_N,   KC_E,   KC_BSPC,KC_ENT, 
+        //     KC_G,   KC_D,   KC_O,   KC_R,   KC_S,   KC_B,   
+        //     ______,   KC_J,   KC_U,   KC_M,   KC_P,   KC_X,   
+        //     ______, ______,______,  ______,KC_LEFT,KC_RGHT 
+        // ),
 //     [0] = KEYMAP_FIT( 
 //     KC_Z,       KC_V    KC_C,       KC_H,       KC_W,       KC_K,  
 //     KC_F,       KC_I    KC_T,       KC_A,       KC_L,       KC_Y,  
@@ -143,13 +242,13 @@ const uint16_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
     // ),
 };
 
-enum function_id {
-    SHIFT_ESC,
-};
+  // enum function_id {
+  //   SHIFT_ESC,
+  // };
 
-const uint16_t PROGMEM fn_actions[] = {
-  [0]  = ACTION_FUNCTION(SHIFT_ESC),
-};
+  // const uint16_t PROGMEM fn_actions[] = {
+  // [0]  = ACTION_FUNCTION(SHIFT_ESC),
+  // };
 
 // qk_tap_dance_action_t tap_dance_actions[] = {
 //   [0] = ACTION_TAP_DANCE_DOUBLE(KC_D, KC_4),
@@ -207,21 +306,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         layer_off(Layer2);
         layer_off(Layer3);
         layer_on(Layer0);
-        // if (record->event.time > 300 )
-        // {
-        //     layer_on(Layer3);
-        // }
-      }//else if( record->event.pressed && record->event.time > 1000){
-      //   // layer_off(Layer1);
-      //   // layer_off(Layer2);
-      //   // layer_off(Layer3);
-      //   // layer_on(Layer0);
-      //   layer_on(Layer3);
-      //   // if (record->event.time > 300 )
-      //   // {
-      //   //     layer_on(Layer3);
-      //   // }
-      // }
+      }
       return false;
       break;
     case Layer_1:

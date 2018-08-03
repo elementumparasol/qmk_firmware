@@ -147,6 +147,12 @@ const uint16_t PROGMEM fn_actions[] = {
     [1] = ACTION_LAYER_TAP_TOGGLE(SYMB)                // FN1 - Momentary Layer 1 (Symbols)
 };
 
+
+qk_tap_dance_action_t tap_dance_actions[] = {
+  [0] = ACTION_TAP_DANCE_DOUBLE(KC_D, KC_4),
+  [1] = ACTION_TAP_DANCE_DOUBLE(KC_E, KC_5)
+};
+
 const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 {
   // MACRODOWN only works in this function
